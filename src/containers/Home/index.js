@@ -5,6 +5,7 @@ import {
     Text,
     Button
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class Home extends PureComponent {
 
@@ -21,6 +22,7 @@ class Home extends PureComponent {
                         onPress={() => console.log(666)}
                         title="点击跳转"
                 />
+                    <Icon name="rocket" size={30} color="#900" />
             </View >
         );
     }
