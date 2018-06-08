@@ -2,8 +2,7 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
-    Text,
-    Button
+    Text
 } from 'react-native';
 
 class Home extends PureComponent {
@@ -16,11 +15,7 @@ class Home extends PureComponent {
         // const { navigate } = this.props.navigation;
         return (
                 <View style={styles.container}>
-                <Text style={{ padding: 10 }}>Hello, NFC!</Text >
-                <Button
-                        onPress={() => console.log(666)}
-                        title="点击跳转"
-                />
+                <Text style={{ padding: 10 }}>Setting!</Text >
             </View >
         );
     }
