@@ -3,6 +3,7 @@ import tabBarIcon from '../../components/tabBarIcon';
 import Home from '../Home';
 import Setting from '../Setting';
 import Photo from '../Photo';
+import QRcode from '../QRcode';
 
 const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
@@ -17,6 +18,13 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 screen: Photo,
                 navigationOptions: {
                     title: '拍照',
+                    tabBarIcon: tabBarIcon('photo-album'),
+                }
+            },
+            QRcode:{
+                screen: QRcode,
+                navigationOptions: {
+                    title: '二维码',
                     tabBarIcon: tabBarIcon('photo-album'),
                 }
             },

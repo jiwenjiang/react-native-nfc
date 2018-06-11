@@ -24,7 +24,6 @@ class Home extends PureComponent {
                               photos={[]}
                               onFileUpload={this.onFileUpload}
                 />
-                    <Icon name="rocket" size={30} color="#900"/>
             </View >
         );
     }

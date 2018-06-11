@@ -64,6 +64,7 @@ class CameraButton extends React.Component {
 
     showImagePicker() {
         ImagePicker.showImagePicker(options, (response) => {
+            console.log(response);
             if (response.didCancel) {
                 console.log('User cancelled image picker');
             }
@@ -73,36 +74,36 @@ class CameraButton extends React.Component {
 
             else {
 
-                let source;
-
-                if (Platform.OS === 'android') {
-                    source = { uri: response.uri, isStatic: true };
-                }
-                else {
-                    source = { uri: response.uri.replace('file://', ''), isStatic: true };
-                }
-
-
-                let file;
-                if (Platform.OS === 'android') {
-                    file = response.uri;
-                }
-                else {
-                    file = response.uri.replace('file://', '');
-                }
-
-
-                this.setState(
-                        {
-                            loading: true
-                        }
-                );
-                this.props.onFileUpload(file, response.fileName || '未命名文件.jpg')
-                        .then(result => {
-                            this.setState({
-                                              loading: false
-                                          });
-                        });
+                // let source;
+                //
+                // if (Platform.OS === 'android') {
+                //     source = { uri: response.uri, isStatic: true };
+                // }
+                // else {
+                //     source = { uri: response.uri.replace('file://', ''), isStatic: true };
+                // }
+                //
+                //
+                // let file;
+                // if (Platform.OS === 'android') {
+                //     file = response.uri;
+                // }
+                // else {
+                //     file = response.uri.replace('file://', '');
+                // }
+                //
+                //
+                // this.setState(
+                //         {
+                //             loading: true
+                //         }
+                // );
+                // this.props.onFileUpload(file, response.fileName || '未命名文件.jpg')
+                //         .then(result => {
+                //             this.setState({
+                //                               loading: false
+                //                           });
+                //         });
             }
         });
     }
