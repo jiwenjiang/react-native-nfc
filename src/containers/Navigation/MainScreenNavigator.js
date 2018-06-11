@@ -2,6 +2,7 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import tabBarIcon from '../../components/tabBarIcon';
 import Home from '../Home';
 import Setting from '../Setting';
+import Photo from '../Photo';
 
 const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
@@ -13,7 +14,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 }
             },
             photo: {
-                screen: Setting,
+                screen: Photo,
                 navigationOptions: {
                     title: '拍照',
                     tabBarIcon: tabBarIcon('photo-album'),
