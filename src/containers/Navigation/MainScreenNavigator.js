@@ -4,6 +4,7 @@ import Home from '../Home';
 import Setting from '../Setting';
 import Photo from '../Photo';
 import QRcode from '../QRcode';
+import Upload from '../Upload';
 
 const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
@@ -25,7 +26,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 screen: QRcode,
                 navigationOptions: {
                     title: '二维码',
-                    tabBarIcon: tabBarIcon('photo-album'),
+                    tabBarIcon: tabBarIcon('crop-free'),
                 }
             },
             NFC: {
@@ -33,6 +34,13 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 navigationOptions: {
                     title: 'NFC',
                     tabBarIcon: tabBarIcon('credit-card'),
+                }
+            },
+            Upload: {
+                screen: Upload,
+                navigationOptions: {
+                    title: '上传',
+                    tabBarIcon: tabBarIcon('cloud-upload'),
                 }
             },
             Setting: {
@@ -46,7 +54,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
             shifting: true,
             backBehavior: 'none', // 按 back 键是否跳转到第一个 Tab， none 为不跳转
-            initialRouteName: 'Home',
+            initialRouteName: 'Upload',
             activeTintColor: '#ffffff',
             inactiveTintColor: '#eeeeee',
             barStyle: {

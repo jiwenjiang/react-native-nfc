@@ -264,6 +264,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-fs/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3902fa9711ab6789747185f7ae3e2f11a8694f95">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-fs-unspecified_e5244285977f12c152a556b0a3b47abf05b5d735.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"

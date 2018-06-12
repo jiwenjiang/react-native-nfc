@@ -4,11 +4,22 @@ import {
     View,
     Text
 } from 'react-native';
+import RNFS from 'react-native-fs';
 
 class Home extends PureComponent {
 
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount(){
+        console.log(RNFS);
+        // RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
+        //         .then((result) => {
+        //             console.log('GOT RESULT', result);
+        //
+        //             // stat the first file
+        //         })
     }
 
     render() {
