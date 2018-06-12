@@ -3,7 +3,8 @@ import {
     Dimensions,
     StyleSheet,
     Text,
-    View
+    View,
+    TouchableOpacity
 } from 'react-native';
 import Camera from 'react-native-camera';
 
@@ -14,9 +15,11 @@ class RNCamera extends Component {
 
     takePicture() {
         const options = {};
-//options.location = ...
         this.camera.capture({ metadata: options })
-                .then((data) => console.log(data))
+                .then((data) => {
+                    console.log(5555);
+                    this.props.takePicture(data)
+                })
                 .catch(err => console.error(err));
     }
 
@@ -28,9 +31,11 @@ class RNCamera extends Component {
                 }}
                         style={styles.preview}
                         aspect={Camera.constants.Aspect.fill}
-                        captureTarget={Camera.constants.CaptureTarget.memory}
+                        captureTarget={Camera.constants.CaptureTarget.temp}
                 >
-                <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE23]</Text >
+
+                            <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE2]</Text >
+
                 </Camera >
                 </View >
         );

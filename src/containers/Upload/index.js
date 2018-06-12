@@ -7,6 +7,7 @@ import {
 import RNFS from 'react-native-fs';
 import moment from 'moment';
 import mkdir from '../../service/utils/mkdir';
+import RNCamera from '../../components/RNCamera';
 
 class Home extends PureComponent {
 
@@ -16,35 +17,46 @@ class Home extends PureComponent {
 
     componentDidMount() {
         this.storageFile();
-
-        // console.log(date);
-        // console.log(`${RNFS.DocumentDirectoryPath}/photo/${date}`);
-        //
-        // RNFS.exists(`${RNFS.DocumentDirectoryPath}/photo/${date}`)
-        //         .then(result => {
-        //             console.log(result);
-        //         });
-        RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
+        RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY-MM-DD')}`)
                 .then((result) => {
-                    console.log('GOT RESULT', result);
-
-                    // stat the first file
+                    console.log(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY-MM-DD')}`, result);
                 });
     }
 
     async storageFile() {
         const date = moment().format('YYYY-MM-DD');
         const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
-        const re = await mkdir(url);
-        console.log(re);
+        const result = await mkdir(url);
+    }
+
+    takePicture(data) {
+        console.log(66666);
+        const date = moment().format('YYYY-MM-DD');
+        const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/n.jpg`;
+        console.log(data.path);
+        console.log(url);
+        console.log('yes');
+        RNFS.moveFile(data.path, url)
+                .then(result => {
+                    console.log('succ');
+                    RNFS.readDir(url)
+                            .then((result2) => {
+                                console.log('oooo', result2);
+                            });
+                });
     }
 
     render() {
         // const { navigate } = this.props.navigation;
+        const cameraProps = {
+            takePicture: this.takePicture
+        };
+
         return (
                 <View style={styles.container}>
-                <Text style={{ padding: 10 }}>upload!</Text >
-            </View >
+                    <Text style={{ padding: 10 }}>upload!</Text >
+                    <RNCamera {...cameraProps}/>
+                </View >
         );
     }
 }
