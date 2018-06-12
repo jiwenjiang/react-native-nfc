@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "install": "^0.11.0",
+    "prop-types": "^15.6.0",
     "react": "16.3.1",
     "react-native": "0.55.4",
     "react-native-camera": "0.7",
@@ -19,8 +20,7 @@
     "react-navigation-material-bottom-tabs": "^0.3.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0",
-    "prop-types": "^15.6.0"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",
