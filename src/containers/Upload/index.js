@@ -26,24 +26,19 @@ class Home extends PureComponent {
     async storageFile() {
         const date = moment().format('YYYY-MM-DD');
         const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
-        const result = await mkdir(url);
+        await mkdir(url);
     }
 
     takePicture(data) {
-        console.log(66666);
+
         const date = moment().format('YYYY-MM-DD');
-        const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/n.jpg`;
-        console.log(data.path);
-        console.log(url);
-        console.log('yes');
-        RNFS.moveFile(data.path, url)
-                .then(result => {
-                    console.log('succ');
-                    RNFS.readDir(url)
-                            .then((result2) => {
-                                console.log('oooo', result2);
-                            });
-                });
+        const unixTime = moment().unix();
+        const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/${unixTime}.jpg`;
+        RNFS.moveFile(data.path, url).then((result) => {
+            RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${date}`).then((r) => {
+                console.log('result', r);
+            });
+        });
     }
 
     render() {
