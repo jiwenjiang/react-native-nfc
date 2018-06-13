@@ -15,7 +15,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                     tabBarIcon: tabBarIcon('home')
                 }
             },
-            photo: {
+            Photo: {
                 screen: Photo,
                 navigationOptions: {
                     title: '拍照',
@@ -54,7 +54,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
             shifting: true,
             backBehavior: 'none', // 按 back 键是否跳转到第一个 Tab， none 为不跳转
-            initialRouteName: 'Upload',
+            initialRouteName: 'Home',
             activeTintColor: '#ffffff',
             inactiveTintColor: '#eeeeee',
             barStyle: {

@@ -1,12 +1,31 @@
 import React, { PureComponent } from "react";
 import {
     StyleSheet,
-    View
+    View,
+    Image
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import CameraButton from '../../components/CameraButton';
+// import CameraButton from '../../components/CameraButton';
+import mkdir from '../../service/utils/mkdir';
+import readPath from '../../service/utils/readPath';
+import RNFS from 'react-native-fs';
+import moment from 'moment/moment';
+
+async function storageFile() {
+    const date = moment().format('YYYY/MM/DD');
+    const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
+    await mkdir(url);
+    const files = await readPath(url);
+    return files;
+}
 
 class Home extends PureComponent {
+    static navigationOptions = {
+        tabBarOnPress: async ({ defaultHandler, navigation }) => {
+            const { navigate } = navigation;
+            const files = await storageFile();
+            navigate('Photo', { files });
+        }
+    };
 
     constructor(props) {
         super(props);
@@ -17,13 +36,16 @@ class Home extends PureComponent {
     }
 
     render() {
-        // const { navigate } = this.props.navigation;
+        const { files } = this.props.navigation.state.params;
         return (
                 <View style={styles.container}>
-                <CameraButton style={styles.cameraBtn}
-                              photos={[]}
-                              onFileUpload={this.onFileUpload}
-                />
+                    <Image style={styles.photo}
+                           source={{ uri: `file://${files[0].path}` }}
+                    />
+                    {/*<CameraButton style={styles.cameraBtn}*/}
+                    {/*photos={[]}*/}
+                    {/*onFileUpload={this.onFileUpload}*/}
+                    {/*/>*/}
             </View >
         );
     }
@@ -39,6 +61,10 @@ const styles = StyleSheet.create(
                 height: 22,
                 width: 22,
                 resizeMode: 'contain'
+            },
+            photo: {
+                width: 50,
+                height: 50
             }
         }
 );

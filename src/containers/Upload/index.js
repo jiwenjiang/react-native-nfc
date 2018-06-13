@@ -2,7 +2,8 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
-    Text
+    Text,
+    Image
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -36,36 +37,28 @@ class Upload extends PureComponent {
 
     componentDidMount() {
         console.log(this.props);
-        // this.storageFile();
-        // RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY/MM/DD')}`)
-        //         .then((result) => {
-        //             console.log(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY/MM/DD')}`, result);
-        //         });
     }
 
 
-    takePicture(data) {
-
-        const date = moment().format('YYYY/MM/DD');
-        const unixTime = moment().unix();
+    async takePicture(data) {
+        const [date, unixTime] = [moment().format('YYYY/MM/DD'), moment().unix()];
         const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/${unixTime}.jpg`;
-        RNFS.moveFile(data.path, url).then((result) => {
-            RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${date}`).then((r) => {
-                console.log('result', r);
-            });
+        await RNFS.moveFile(data.path, url);
+        await RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${date}`).then((r) => {
+            console.log('result', r);
         });
     }
 
     render() {
-        // const { navigate } = this.props.navigation;
+        const { files } = this.props.navigation.state.params;
         const cameraProps = {
-            takePicture: this.takePicture
+            takePicture: this.takePicture,
         };
 
         return (
                 <View style={styles.container}>
                     <Text style={{ padding: 10 }}>upload!</Text >
-                    <RNCamera {...cameraProps}/>
+                    {/*<RNCamera {...cameraProps}/>*/}
                 </View >
         );
     }
@@ -81,6 +74,10 @@ const styles = StyleSheet.create(
                 height: 22,
                 width: 22,
                 resizeMode: 'contain'
+            },
+            photo: {
+                width: 50,
+                height: 50
             }
         }
 );

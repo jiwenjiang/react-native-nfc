@@ -4,8 +4,6 @@ import React, {
 import { connect } from 'react-redux';
 import {
     createNavigationPropConstructor,       // handles #1 above
-    createNavigationReducer,               // handles #2 above
-    createReactNavigationReduxMiddleware,  // handles #4 above
     initializeListeners,                   // handles #4 above
 } from 'react-navigation-redux-helpers';
 import AppNavigator from '../../config/route';
