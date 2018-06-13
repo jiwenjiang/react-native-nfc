@@ -2,8 +2,7 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
-    Text,
-    Image
+    Button,
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -52,13 +51,16 @@ class Upload extends PureComponent {
     render() {
         const { files } = this.props.navigation.state.params;
         const cameraProps = {
-            takePicture: this.takePicture,
+            takePicture: this.takePicture
         };
 
         return (
                 <View style={styles.container}>
-                    <Text style={{ padding: 10 }}>upload!</Text >
-                    {/*<RNCamera {...cameraProps}/>*/}
+                    <Button
+                            onPress={() => this.onFileUpload()}
+                            title="拍照"
+                    />
+                    <RNCamera {...cameraProps}/>
                 </View >
         );
     }
