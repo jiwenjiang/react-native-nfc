@@ -1,15 +1,38 @@
-import { createStackNavigator } from 'react-navigation';
-import MainScreenNavigator from './MainScreenNavigator';
+import React, {
+    Component
+} from 'react';
+import { connect } from 'react-redux';
+import {
+    createNavigationPropConstructor,       // handles #1 above
+    createNavigationReducer,               // handles #2 above
+    createReactNavigationReduxMiddleware,  // handles #4 above
+    initializeListeners,                   // handles #4 above
+} from 'react-navigation-redux-helpers';
+import AppNavigator from '../../config/route';
 
-const Navigation = createStackNavigator(
-        {
-            Home: {
-                screen: MainScreenNavigator,
-                navigationOptions: {
-                    title: '首页'
-                }
-            }
-        }
-);
 
-export default Navigation;
+const navigationPropConstructor = createNavigationPropConstructor("root");
+
+class Navigation extends Component {
+    componentDidMount() {
+        initializeListeners("root", this.props.nav);
+    }
+
+    render() {
+        this._navigation = navigationPropConstructor(
+                this.props.dispatch,
+                this.props.nav,
+                AppNavigator.router,
+                () => this._navigation
+        );
+        return (
+                <AppNavigator navigation={this._navigation} />
+        );
+    }
+}
+const mapStateToProps = (state) => ({
+    nav: state.nav,
+});
+
+
+export default connect(mapStateToProps)(Navigation);

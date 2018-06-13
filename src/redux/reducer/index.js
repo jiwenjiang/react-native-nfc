@@ -1,10 +1,10 @@
-const Title = (state = '', action) => {
+const PHOTO_VIEWS_REDUCER = (state = '', action) => {
     switch (action.type) {
-        case 'SUB_TITLE':
+        case 'PHOTO_VIEWS':
             return action.item;
         default:
             return state;
     }
-}
+};
 
-export {Title};
+export { PHOTO_VIEWS_REDUCER };

@@ -4,34 +4,49 @@ import {
     View,
     Text
 } from 'react-native';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { PHOTO_VIEWS_ACTION } from '../../redux/action';
 import RNFS from 'react-native-fs';
 import moment from 'moment';
 import mkdir from '../../service/utils/mkdir';
+import readPath from '../../service/utils/readPath';
 import RNCamera from '../../components/RNCamera';
 
-class Home extends PureComponent {
+async function storageFile() {
+    const date = moment().format('YYYY/MM/DD');
+    const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
+    await mkdir(url);
+    const files = await readPath(url);
+    return files;
+}
+
+class Upload extends PureComponent {
+    static navigationOptions = {
+        tabBarOnPress: async ({ defaultHandler, navigation }) => {
+            const { navigate } = navigation;
+            const files = await storageFile();
+            navigate('Upload', { files });
+        }
+    };
 
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
-        this.storageFile();
-        RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY-MM-DD')}`)
-                .then((result) => {
-                    console.log(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY-MM-DD')}`, result);
-                });
+        console.log(this.props);
+        // this.storageFile();
+        // RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY/MM/DD')}`)
+        //         .then((result) => {
+        //             console.log(`${RNFS.DocumentDirectoryPath}/photo/${moment().format('YYYY/MM/DD')}`, result);
+        //         });
     }
 
-    async storageFile() {
-        const date = moment().format('YYYY-MM-DD');
-        const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
-        await mkdir(url);
-    }
 
     takePicture(data) {
 
-        const date = moment().format('YYYY-MM-DD');
+        const date = moment().format('YYYY/MM/DD');
         const unixTime = moment().unix();
         const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/${unixTime}.jpg`;
         RNFS.moveFile(data.path, url).then((result) => {
@@ -69,6 +84,14 @@ const styles = StyleSheet.create(
             }
         }
 );
+const mapStateToProps = state => {
+    return {
+        photoViews: state.PHOTO_VIEWS_REDUCER
+    };
+};
 
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ getPhotos: PHOTO_VIEWS_ACTION }, dispatch);
+};
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Upload);
