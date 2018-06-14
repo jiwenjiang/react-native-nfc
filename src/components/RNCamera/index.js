@@ -51,7 +51,6 @@ class RNCamera extends Component {
 
     render() {
         const { currentImage, hidden } = this.state;
-        console.log(currentImage);
         return (
                 <View style={[styles.container, hidden && styles.hidden]}>
                     {currentImage ? <ImageBackground style={styles.photo} source={{ uri: currentImage }}>

@@ -17,10 +17,10 @@ class Home extends PureComponent {
         // const { navigate } = this.props.navigation;
         return (
                 <View style={styles.container}>
-                <Text style={{ padding: 10 }}>Hello, NFC!</Text >
+                <Text style={{ padding: 10 }}>Hello, J_bleach!</Text >
                 <Button
                         onPress={() => console.log(666)}
-                        title="点击跳转"
+                        title="扫描二维码"
                 />
                     <Icon name="rocket" size={30} color="#900" />
             </View >

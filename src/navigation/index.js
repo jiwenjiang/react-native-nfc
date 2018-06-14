@@ -6,7 +6,7 @@ import {
     createNavigationPropConstructor,       // handles #1 above
     initializeListeners,                   // handles #4 above
 } from 'react-navigation-redux-helpers';
-import AppNavigator from '../../config/route';
+import AppNavigator from './route';
 
 
 const navigationPropConstructor = createNavigationPropConstructor("root");

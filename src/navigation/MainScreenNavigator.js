@@ -1,10 +1,9 @@
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import tabBarIcon from '../../components/tabBarIcon';
-import Home from '../Home';
-import Setting from '../Setting';
-import Photo from '../Photo';
-import QRcode from '../QRcode';
-import Upload from '../Upload';
+import tabBarIcon from '../components/tabBarIcon/index';
+import Home from '../containers/Home/index';
+import Setting from '../containers/Setting/index';
+import Photo from '../containers/Photo/index';
+import Upload from '../containers/Upload/index';
 
 const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
@@ -20,13 +19,6 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 navigationOptions: {
                     title: '拍照',
                     tabBarIcon: tabBarIcon('photo-album')
-                }
-            },
-            QRcode: {
-                screen: QRcode,
-                navigationOptions: {
-                    title: '二维码',
-                    tabBarIcon: tabBarIcon('crop-free')
                 }
             },
             NFC: {
