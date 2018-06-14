@@ -60,6 +60,10 @@ class Upload extends PureComponent {
                             title="拍照"
                     />
                     <RNCamera {...cameraProps}/>
+                     <Button
+                             onPress={() => this.onFileUpload()}
+                             title="拍照2"
+                     />
                 </View >
         );
     }

@@ -23,6 +23,7 @@ const readPath = async (url) => {
 const deleteFile = async (url) => {
     try {
         await RNFS.unlink(url);
+        console.log(url);
         return new Promise(resolve => resolve(url));
     }
     catch (e) {

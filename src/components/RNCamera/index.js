@@ -10,12 +10,15 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { deleteFile, mkdir, readPath } from '../../service/utils/fileOperations';
+import RNFS from 'react-native-fs';
+import moment from 'moment/moment';
 
 class RNCamera extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: true,
+            hidden: false,
             currentImage: null
         };
     }
@@ -23,27 +26,34 @@ class RNCamera extends Component {
     async takePicture() {
         const options = {};
         const { path: currentImage } = await this.camera.capture({ metadata: options });
-        console.log(currentImage);
         this.setState({ currentImage });
+    }
 
-        // .then((data) => {
-        //     console.log(data);
-        //
-        //     // this.props.takePicture(data);
-        // })
-        // .catch(err => console.error(err));
+    back() {
+        this.setState({ currentImage: null, hidden: true });
+    }
+
+    async check() {
+        const [date, unixTime] = [moment().format('YYYY/MM/DD'), moment().unix()];
+        const dir = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
+        await mkdir(dir);
+        const url = `${dir}/${unixTime}.jpg`;
+        await RNFS.moveFile(this.state.currentImage, url);
+        console.log(await readPath(dir));
+        this.setState({ currentImage: null });
     }
 
     cancel() {
-        console.log(Dimensions.get('window').width);
-        console.log(Dimensions.get('window').height);
+        deleteFile(this.state.currentImage);
+        this.setState({ currentImage: null });
     }
 
+
     render() {
-        const { currentImage } = this.state;
+        const { currentImage, hidden } = this.state;
         console.log(currentImage);
         return (
-                <View style={styles.container}>
+                <View style={[styles.container, hidden && styles.hidden]}>
                     {currentImage ? <ImageBackground style={styles.photo} source={{ uri: currentImage }}>
                             <TouchableOpacity style={styles.capture} onPress={() => this.cancel()}>
                                 <Icon name="close" size={30}/>
@@ -67,7 +77,6 @@ class RNCamera extends Component {
                             </TouchableOpacity >
                             </Camera >
                     }
-
                 </View >
         );
     }
@@ -102,7 +111,10 @@ const styles = StyleSheet.create(
                 flex: 1,
                 justifyContent: 'center',
                 flexDirection: 'row',
-                alignItems: 'flex-end',
+                alignItems: 'flex-end'
+            },
+            hidden: {
+                display: 'none'
             }
         }
 );
