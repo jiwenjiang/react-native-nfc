@@ -14,12 +14,12 @@ class Home extends PureComponent {
     }
 
     render() {
-        // const { navigate } = this.props.navigation;
+        const { navigate } = this.props.navigation;
         return (
                 <View style={styles.container}>
                 <Text style={{ padding: 10 }}>Hello, J_bleach!</Text >
                 <Button
-                        onPress={() => console.log(666)}
+                        onPress={() => navigate('QRcode')}
                         title="扫描二维码"
                 />
                     <Icon name="rocket" size={30} color="#900" />
