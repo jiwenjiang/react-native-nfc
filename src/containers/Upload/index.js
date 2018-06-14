@@ -2,15 +2,14 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
-    Button,
+    Button
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { PHOTO_VIEWS_ACTION } from '../../redux/action';
 import RNFS from 'react-native-fs';
 import moment from 'moment';
-import mkdir from '../../service/utils/mkdir';
-import readPath from '../../service/utils/readPath';
+import { mkdir, readPath } from '../../service/utils/fileOperations';
 import RNCamera from '../../components/RNCamera';
 
 async function storageFile() {

@@ -6,8 +6,7 @@ import {
     Button
 } from 'react-native';
 // import CameraButton from '../../components/CameraButton';
-import mkdir from '../../service/utils/mkdir';
-import readPath from '../../service/utils/readPath';
+import { mkdir, readPath } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
 import moment from 'moment/moment';
 

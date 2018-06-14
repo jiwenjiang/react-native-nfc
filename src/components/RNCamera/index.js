@@ -4,7 +4,7 @@ import {
     StyleSheet,
     Button,
     Text,
-    Image,
+    ImageBackground,
     View,
     TouchableOpacity
 } from 'react-native';
@@ -15,43 +15,59 @@ class RNCamera extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: true
+            visible: true,
+            currentImage: null
         };
     }
 
-    takePicture() {
+    async takePicture() {
         const options = {};
-        this.camera.capture({ metadata: options })
-                .then((data) => {
-                    console.log(888);
-                    // this.props.takePicture(data);
-                })
-                .catch(err => console.error(err));
+        const { path: currentImage } = await this.camera.capture({ metadata: options });
+        console.log(currentImage);
+        this.setState({ currentImage });
+
+        // .then((data) => {
+        //     console.log(data);
+        //
+        //     // this.props.takePicture(data);
+        // })
+        // .catch(err => console.error(err));
     }
 
     cancel() {
-        console.log('ll');
+        console.log(Dimensions.get('window').width);
+        console.log(Dimensions.get('window').height);
     }
 
     render() {
-        const { visible } = this.state;
+        const { currentImage } = this.state;
+        console.log(currentImage);
         return (
                 <View style={styles.container}>
-                    {visible ? <Camera ref={(cam) => {
-                        this.camera = cam;
-                    }}
-                                       style={styles.preview}
-                                       aspect={Camera.constants.Aspect.fill}
-                                       captureTarget={Camera.constants.CaptureTarget.temp}
-                    >
-                    <TouchableOpacity style={styles.capture} onPress={() => this.cancel()}>
-                        <Icon name="expand-more" size={30}/>
-                    </TouchableOpacity >
-                    <TouchableOpacity style={styles.capture} onPress={() => this.takePicture()}>
-                        <Icon name="camera-alt" size={30}/>
-                    </TouchableOpacity >
-                </Camera > : null}
-                    <Image />
+                    {currentImage ? <ImageBackground style={styles.photo} source={{ uri: currentImage }}>
+                            <TouchableOpacity style={styles.capture} onPress={() => this.cancel()}>
+                                <Icon name="close" size={30}/>
+                            </TouchableOpacity >
+                            <TouchableOpacity style={styles.capture} onPress={() => this.check()}>
+                                <Icon name="check" size={30}/>
+                            </TouchableOpacity >
+                            </ImageBackground >
+                            : <Camera ref={(cam) => {
+                                this.camera = cam;
+                            }}
+                                      style={styles.preview}
+                                      aspect={Camera.constants.Aspect.fill}
+                                      captureTarget={Camera.constants.CaptureTarget.temp}
+                            >
+                            <TouchableOpacity style={styles.capture} onPress={() => this.back()}>
+                                <Icon name="expand-more" size={30}/>
+                            </TouchableOpacity >
+                            <TouchableOpacity style={styles.capture} onPress={() => this.takePicture()}>
+                                <Icon name="camera-alt" size={30}/>
+                            </TouchableOpacity >
+                            </Camera >
+                    }
+
                 </View >
         );
     }
@@ -67,22 +83,26 @@ const styles = StyleSheet.create(
                 flex: 1,
                 justifyContent: 'center',
                 flexDirection: 'row',
-                alignItems: 'flex-end',
-                width: Dimensions.get('window').width,
-                height: Dimensions.get('window').height,
-                zIndex: 1
+                alignItems: 'flex-end'
             },
             capture: {
                 flex: 0,
                 backgroundColor: 'rgba(255, 255, 255, 0.3)',
                 borderRadius: 25,
                 // color: '#000',
-                margin: 10,
+                margin: 20,
                 marginBottom: 30,
                 width: 50,
                 height: 50,
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                zIndex: 1
+            },
+            photo: {
+                flex: 1,
+                justifyContent: 'center',
+                flexDirection: 'row',
+                alignItems: 'flex-end',
             }
         }
 );
