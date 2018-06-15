@@ -11,6 +11,25 @@ class Home extends PureComponent {
 
     constructor(props) {
         super(props);
+        this.state = {
+            initialPosition: null,
+            lastPosition: null
+        };
+    }
+
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+                (initialPosition) => this.setState({ initialPosition }),
+                (error) => alert(error.message),
+                { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+        );
+        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
+            this.setState({ lastPosition });
+        });
+    }
+
+    componentWillUnmount() {
+        navigator.geolocation.clearWatch(this.watchID);
     }
 
     render() {
@@ -22,7 +41,14 @@ class Home extends PureComponent {
                         onPress={() => navigate('QRcode')}
                         title="扫描二维码"
                 />
-                    <Icon name="rocket" size={30} color="#900" />
+                <Text>
+                <Text style={styles.title}>Initial position: </Text>
+                        {JSON.stringify(this.state.initialPosition)}
+                </Text>
+                <Text>
+                <Text style={styles.title}>Current position: </Text>
+                {JSON.stringify(this.state.lastPosition)}
+                </Text>
             </View >
         );
     }
