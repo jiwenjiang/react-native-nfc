@@ -13,9 +13,9 @@ const AppNavigator = createStackNavigator(
             QRcode: {
                 screen: QRcode,
                 navigationOptions: {
-                    title: '二维码',
+                    // header: null
                 }
-            },
+            }
         }
 );
 export default AppNavigator;
