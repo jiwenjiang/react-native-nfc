@@ -4,6 +4,7 @@ import Home from '../containers/Home/index';
 import Setting from '../containers/Setting/index';
 import Photo from '../containers/Photo/index';
 import Upload from '../containers/Upload/index';
+import NFC from '../containers/NFC/index';
 
 const MainScreenNavigator = createMaterialBottomTabNavigator(
         {
@@ -22,7 +23,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 }
             },
             NFC: {
-                screen: Setting,
+                screen: NFC,
                 navigationOptions: {
                     title: 'NFC',
                     tabBarIcon: tabBarIcon('credit-card')
@@ -32,7 +33,7 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                 screen: Upload,
                 navigationOptions: {
                     title: '上传',
-                    tabBarIcon: tabBarIcon('cloud-upload'),
+                    tabBarIcon: tabBarIcon('cloud-upload')
                 }
             },
             Setting: {
