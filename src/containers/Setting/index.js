@@ -1,50 +1,49 @@
-import React, { PureComponent } from "react";
+import React, { Component } from 'react';
 import {
+    AppRegistry,
     StyleSheet,
+    Text,
+    Vibration,
     View,
-    Text
+    TextInput,
+    DeviceEventEmitter
 } from 'react-native';
-import RNFS from 'react-native-fs';
 
-class Home extends PureComponent {
+import ScanView from 'react-native-scanidcard';
 
+class ScanScreen extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            torchMode: 'off',
+            cameraType: 'back'
+        };
     }
 
-    componentDidMount(){
-        console.log(RNFS);
-        // RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
-        //         .then((result) => {
-        //             console.log('GOT RESULT', result);
-        //
-        //             // stat the first file
-        //         })
+    componentDidMount() {
+        this.listener = DeviceEventEmitter.addListener('scanCallBack', this.scanCallBack.bind(this)); //对应了原生端的名字
+    }
+
+    componentWillUnmount() {
+        this.listener && this.listener.remove(); //记得remove哦
+        this.listener = null;
+    }
+
+    scanCallBack(e) {
+        console.log(4444);
+        console.info(e);
     }
 
     render() {
-        // const { navigate } = this.props.navigation;
         return (
-                <View style={styles.container}>
-                <Text style={{ padding: 10 }}>Setting!</Text >
-            </View >
+                <ScanView
+                        style={{ flex: 1 }}
+                        torchMode={this.state.torchMode}
+                        cameraType={this.state.cameraType}
+                />
         );
     }
 }
 
-const styles = StyleSheet.create(
-        {
-            container: {
-                flex: 1,
-                backgroundColor: '#fff'
-            },
-            icon: {
-                height: 22,
-                width: 22,
-                resizeMode: 'contain'
-            }
-        }
-);
-
-
-export default Home;
+export default ScanScreen;

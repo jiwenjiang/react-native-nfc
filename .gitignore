@@ -44,7 +44,9 @@ buck-out
 .gradle
 *.iml
 /android/app/build/
+/android/build/
 local.properties
+my-release-key.keystore
 
 # Node
 node_modules

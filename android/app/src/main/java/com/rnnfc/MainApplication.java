@@ -3,6 +3,8 @@ package com.rnnfc;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.scanidcard.ScanPackage;
+import community.revteltech.nfc.NfcManagerPackage;
 import com.rnfs.RNFSPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -27,6 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new ScanPackage(),
+            new NfcManagerPackage(),
             new RNFSPackage(),
             new RCTCameraPackage(),
             new VectorIconsPackage(),

@@ -1,4 +1,10 @@
 rootProject.name = 'rnNFC'
+include ':react-native-scanidcard'
+project(':react-native-scanidcard').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-scanidcard/android/app')
+include ':idcard-library'
+project(':idcard-library').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-scanidcard/android/idcard-library')
+include ':react-native-nfc-manager'
+project(':react-native-nfc-manager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-nfc-manager/android')
 include ':react-native-fs'
 project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
 include ':react-native-camera'

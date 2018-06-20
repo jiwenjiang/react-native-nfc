@@ -3,354 +3,381 @@
 
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_ac4557c6ec9dd81330e99922d44a099ea96ba6c6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_8ef592a37a5764673f5d5197a4108a2c57267b2a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_00fe56aebca06dd8c86a26cef5b4118769404106.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.adobe.xmp\xmpcore\5.1.2\55615fa2582424e38705487d1d3969af8554f637\xmpcore-5.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\xmpcore-5.1.2_c51f4ea832e57588f006fde4021879f460d134a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.1\2287494d4f5f9f3a9a2bb6980e3f32053721b315\core-3.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\core-3.2.1_2aa704cfdb5d43d415259631e4fdaa99808322e0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_a4a6226f1727261ff21f3d3e8b14ffa9afc4a57e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.1_72406a1359fd50e5fad8426b0ae130a9e6a1763d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.1_a45d40a3df672e2ea2c5d10e406d1c915fa7df41.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_b6ac557a1f53e5b0da7e1aafc6a2de7418e0d833.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_a79ece29036bd8b47c04d6c5483720e09dcaa156.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_3de0f8cc3c2d906fb2260f398e661a86d3b179d3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\rnNFC\react-native-camera\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="cdc6aff7136e8d205e0672451fd456ef67dbeeee">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\rnNFC-react-native-camera-unspecified_0ab3896d3efd8dc7622a16172d79c9ed46426eec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.1_da0970c20e0eb7d415425238681dc254da873d9e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_bdf25a521816aa1d2ab4f997e51246fe42e94878.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_8926d271b016b56123f07c764e427b3f82a0a56b.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_e155857ccf66c4b43cf10a23f85bc338d8142514.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\rnNFC\react-native-fs\unspecified\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="782700337d5b6f378bd4cb539154519a27b60f04">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\rnNFC-react-native-fs-unspecified_f7d827f22ac966dee50b6f9dc7e9e654e5d4d081.jar" />
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_cf8e23fb48e0ebba57836f1fd3124b9c2396ae08.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_edca0402cef55a5cf854ade7954198307211b6f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_8b248ebc45f4e3045d9b826e87dd52c2af785a46.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_66dd64cedf3d5b93d94c6b3db3f9511d2cb36449.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_bb89bcad2469eaae2e552d0b0a7c23d5b4ba3126.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_31a0e040013ad2eb540feae3c6aada3bab89e41d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_776c731c05c1940bb4a91f23ceab77e68f77fafb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_65ce4d8d1e6db3d2ea19a3a6825215ab85ac39fd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_8e6d82c81d108624152365b9bc35b390515b1b01.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_4c7c1fd839ae027f680ae94a850afd499ca8098a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\rnNFC\react-native-image-picker\unspecified\jars\classes.jar"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="5e6570156a5a06abc6990fe34cd577d9fb0172c6">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\rnNFC-react-native-image-picker-unspecified_69c220cdcc55655a7dddf8ae201839e7b4745103.jar" />
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_d6b570396e2477f8990a9c33e2828ac851add7c5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\j_bleach\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_3e0bbc999caafffb4440329eacdca722a7590aac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_7855a5f178e215847a0e37d63113b731b589e74d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.drewnoakes\metadata-extractor\2.9.1\53fdf22be10c9d426ec63431c7342895bc642261\metadata-extractor-2.9.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\metadata-extractor-2.9.1_4733ce6b6488b40e6144d8d42f90eafadd5711f7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_ffa75a7a19e11bfc873db5ea44f8af8c23db6c3c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\j_bleach\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_3cb719354eb5786c142edc9480c26de85eebe4ad.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_a120d985b3f5cb0e17b1efb6c42217a9ddaf3a75.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\rnNFC\react-native-vector-icons\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\rnNFC-react-native-vector-icons-unspecified_f94ba5b6f270fcd2c96314eb4eedc51088919beb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.4_404f09d725411362a1a82a4e650bd6cb98820dfe.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.4_e721e121b51f2b8341939a1bc604bbd1b6391a22.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_9d18f635f12534340f2866d6e694eae964af46a2.jar" />
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_0a2acb6ea70c7521efb0ce86426ecca5664bdaca.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-nfc-manager/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_6ef7c956e9a801dc6ec319c5a219336b348925c8.jar" />
+        sha1="e0dab0157c1a1442aa816f93ac7ec9b71595b9fe">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-nfc-manager-unspecified_db76dcef91a5b5e3b70b88f4e3e72dcd8a8a595b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_d4e0cca3b98c20e916b32238bd4a6a72fa89cfc3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_526c434bf5d4366778e36b86ede95422f6d96669.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_365a718440eed733d93148cd6e207a4fb58cdba8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/idcard-library/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a338633abfdc7f47498dabc59be888c507cbeb41">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-idcard-library-unspecified_13223f043b76d0affb8c443a3628e2122178298f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.1_5f2740e677f0bbf277243227b8a1af4d1d173a17.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_6e9aa2486356b87a1815840ca4b0a341f627068a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_fdb44ad1aeeb96ef1f55bf8d2978d09d6da7551c.jar" />
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_b6d1365cf4e4e89a965717e73c3a746641fdaa66.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_b17dd17ae7e93406b9ff67686a47f820359f6a6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_2c3cc6f29878a0424f11047b62c67f2089fa7409.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_02771077b41a792ed9cef9ab1e290e8675979af8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_348737d35e83e69d6438d633b9d9e204b71b0a38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_f2a16cd50f4726cc61caad35772544e760c4111f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_1125a5be1624c7ac918c41300edb2c5315737f58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_7c5322de5f0ab7df9c26b4acae5f094f17bc290d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_f28681a2d9b214d52cb3dac201417db3433bfeb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f3dae6ca5b45ef509d7f7af5d3be654945d58253.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_d4a8ea6da420549ab49e31bbc1a9e3e6e4593680.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_81573c881d2a0f7a9ea6b7e5ad2e277e3b5aa8cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_97852e006b131f98e4723180e1f4657686ca3a06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_bf23833336ec44e2e9d988c328bb1c163251e248.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_135de90d2979bff821aa87bff062a5c2b593e822.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_d5f0b0e9116b6c3b4da73369e772dc5c81b55b14.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_818fc090fd42c20cf8ae0838511f94df1bdcdfbd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="F:\RN\react-native-nfc\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_8ada23533e823d6cb507dc8dc43fff8bb513c346.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_e17e44d521945ead85c7b6a60717772c20862bc3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_829f6fd66ecc1f0a8273cd1c2f6bb53e3a7991d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_646680db4549d045e8535b71a10f66584ca939d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_a9e6522ede58feb1e32e291a643c94512b2dfabd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="F:\RN\react-native-nfc\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_35c94ea4e7cf4f88463ee25531220ca0fc6928e6.jar" />
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_da98d7ab7aeda48d3a51e5cdb6f1e5ae266f89fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-scanidcard/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="209730a8e5fc27b955f40f21902e6b3e135a82c2">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-scanidcard-unspecified_2501ddff3f2992b620dc7f84333b03ac949ab724.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-camera/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5e03e1d2a37efdef5890cfb2b61784031f5a5463">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-camera-unspecified_c441afcf898a9c38dc0ea016f2a2e39453e726fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_0f132bca628ce0c8648f10644dae49943b5a8420.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_2d0815d14119fb4a49fb7fcf87f38517dddef5f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-image-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e53986468b97388c2f8cda7863387414805f56f1">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-image-picker-unspecified_89d6589e0a78b6530f4c0af63557e49096d75402.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5e8ab25e82aeac62f0f98ad05caaa49a5821c499">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-vector-icons-unspecified_b2e6d3e68fde8af428b9abe93d5129d81f048f88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_4a64128bfc4c8f799f4e87cc091d8d432549a966.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/exploded-aar/rnNFC/react-native-fs/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3902fa9711ab6789747185f7ae3e2f11a8694f95">
+        <dex dex="/home/j_bleach/work/pro/react-native-nfc/android/app/build/intermediates/pre-dexed/debug/rnNFC-react-native-fs-unspecified_e5244285977f12c152a556b0a3b47abf05b5d735.jar" />
     </item>
 
 </items>
