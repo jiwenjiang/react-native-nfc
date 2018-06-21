@@ -11,7 +11,7 @@ class QRcode extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: '正在扫描2'
+            data: '正在扫描'
         };
     }
 

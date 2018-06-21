@@ -8,13 +8,13 @@ import {
     View,
     TouchableOpacity
 } from 'react-native';
-import Camera from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { deleteFile, mkdir, readPath } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
 import moment from 'moment/moment';
 
-class RNCamera extends Component {
+class JCamera extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,8 +24,8 @@ class RNCamera extends Component {
     }
 
     async takePicture() {
-        const options = {};
-        const { path: currentImage } = await this.camera.capture({ metadata: options });
+        const options = { quality: 0.5, skipProcessing: true };
+        const { uri: currentImage } = await this.camera.takePictureAsync(options);
         this.setState({ currentImage });
     }
 
@@ -61,12 +61,9 @@ class RNCamera extends Component {
                                 <Icon name="check" size={30}/>
                             </TouchableOpacity >
                             </ImageBackground >
-                            : <Camera ref={(cam) => {
+                            : <RNCamera ref={(cam) => {
                                 this.camera = cam;
-                            }}
-                                      style={styles.preview}
-                                      aspect={Camera.constants.Aspect.fill}
-                                      captureTarget={Camera.constants.CaptureTarget.temp}
+                            }} style={styles.preview}
                             >
                             <TouchableOpacity style={styles.capture} onPress={() => this.back()}>
                                 <Icon name="expand-more" size={30}/>
@@ -74,7 +71,7 @@ class RNCamera extends Component {
                             <TouchableOpacity style={styles.capture} onPress={() => this.takePicture()}>
                                 <Icon name="camera-alt" size={30}/>
                             </TouchableOpacity >
-                            </Camera >
+                            </RNCamera >
                     }
                 </View >
         );
@@ -118,4 +115,4 @@ const styles = StyleSheet.create(
         }
 );
 
-export default RNCamera;
+export default JCamera;
