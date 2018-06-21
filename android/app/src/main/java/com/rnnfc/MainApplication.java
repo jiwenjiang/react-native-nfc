@@ -6,7 +6,7 @@ import com.facebook.react.ReactApplication;
 import com.scanidcard.ScanPackage;
 import community.revteltech.nfc.NfcManagerPackage;
 import com.rnfs.RNFSPackage;
-import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import org.reactnative.camera.RNCameraPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.facebook.react.ReactNativeHost;
@@ -32,7 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
           new ScanPackage(),
             new NfcManagerPackage(),
             new RNFSPackage(),
-            new RCTCameraPackage(),
+            new RNCameraPackage(),
             new VectorIconsPackage(),
             new ImagePickerPackage()
       );

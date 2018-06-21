@@ -31,7 +31,6 @@ class ScanScreen extends Component {
     }
 
     scanCallBack(e) {
-        console.log(4444);
         console.info(e);
     }
 
