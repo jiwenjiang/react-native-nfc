@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Dimensions,
     StyleSheet,
-    Button,
-    Text,
     ImageBackground,
     View,
     TouchableOpacity

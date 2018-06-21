@@ -9,7 +9,7 @@ import {
     DeviceEventEmitter
 } from 'react-native';
 
-// import ScanView from 'react-native-scanidcard';
+import ScanView from 'react-native-scanidcard';
 
 class ScanScreen extends Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class ScanScreen extends Component {
     }
 
     componentDidMount() {
-        // this.listener = DeviceEventEmitter.addListener('scanCallBack', this.scanCallBack.bind(this)); //对应了原生端的名字
+        this.listener = DeviceEventEmitter.addListener('scanCallBack', this.scanCallBack.bind(this)); //对应了原生端的名字
     }
 
     componentWillUnmount() {
@@ -36,12 +36,11 @@ class ScanScreen extends Component {
 
     render() {
         return (
-                <View>1</View>
-                // <ScanView
-                //         style={{ flex: 1 }}
-                //         torchMode={this.state.torchMode}
-                //         cameraType={this.state.cameraType}
-                // />
+                <ScanView
+                        style={{ flex: 1 }}
+                        torchMode={this.state.torchMode}
+                        cameraType={this.state.cameraType}
+                />
         );
     }
 }
