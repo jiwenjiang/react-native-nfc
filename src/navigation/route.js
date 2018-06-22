@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
 import MainScreenNavigator from './MainScreenNavigator';
-import QRcode from '../containers/QRcode/index';
+import QRcode from '../containers/QRcode';
+import Camera from '../containers/Camera';
 
 const AppNavigator = createStackNavigator(
         {
@@ -13,7 +14,13 @@ const AppNavigator = createStackNavigator(
             QRcode: {
                 screen: QRcode,
                 navigationOptions: {
-                    // header: null
+                    header: null
+                }
+            },
+            Camera: {
+                screen: Camera,
+                navigationOptions: {
+                    header: null
                 }
             }
         }

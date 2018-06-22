@@ -3,30 +3,36 @@ import {
     StyleSheet,
     ImageBackground,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    ActivityIndicator
 } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { deleteFile, mkdir, readPath } from '../../service/utils/fileOperations';
+import { deleteFile, mkdir } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
 import moment from 'moment/moment';
+import Mask from '../Mask';
 
 class JCamera extends Component {
     constructor(props) {
         super(props);
         this.state = {
             hidden: false,
-            currentImage: null
+            currentImage: null,
+            mask: false
         };
     }
 
     async takePicture() {
+        this.setState({ mask: true });
         const options = { quality: 0.5, skipProcessing: true };
         const { uri: currentImage } = await this.camera.takePictureAsync(options);
-        this.setState({ currentImage });
+        this.setState({ currentImage, mask: false });
     }
 
     back() {
+        const { navigation } = this.props;
+        navigation.goBack();
         this.setState({ currentImage: null, hidden: true });
     }
 
@@ -36,7 +42,6 @@ class JCamera extends Component {
         await mkdir(dir);
         const url = `${dir}/${unixTime}.jpg`;
         await RNFS.moveFile(this.state.currentImage, url);
-        console.log(await readPath(dir));
         this.setState({ currentImage: null });
     }
 
@@ -47,7 +52,10 @@ class JCamera extends Component {
 
 
     render() {
-        const { currentImage, hidden } = this.state;
+        const { currentImage, hidden, mask } = this.state;
+        const maskProps = {
+            maskStyle: styles.centering
+        };
         return (
                 <View style={[styles.container, hidden && styles.hidden]}>
                     {currentImage ? <ImageBackground style={styles.photo} source={{ uri: currentImage }}>
@@ -69,6 +77,15 @@ class JCamera extends Component {
                                 <Icon name="camera-alt" size={30}/>
                             </TouchableOpacity >
                             </RNCamera >
+                    }
+                    {
+                        mask ? < Mask {...maskProps}>
+                        <ActivityIndicator
+                                size="large"
+                                color="#4177F6"
+                                style={[styles.centering]}
+                        />
+                        </Mask > : null
                     }
                 </View >
         );
@@ -108,6 +125,10 @@ const styles = StyleSheet.create(
             },
             hidden: {
                 display: 'none'
+            },
+            centering: {
+                alignItems: 'center',
+                justifyContent: 'center'
             }
         }
 );

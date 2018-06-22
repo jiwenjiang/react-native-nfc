@@ -2,15 +2,13 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
+    Image,
     Button
 } from 'react-native';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { PHOTO_VIEWS_ACTION } from '../../redux/action';
-import RNFS from 'react-native-fs';
-import moment from 'moment';
+// import CameraButton from '../../components/CameraButton';
 import { mkdir, readPath } from '../../service/utils/fileOperations';
-import RNCamera from '../../components/RNCamera';
+import RNFS from 'react-native-fs';
+import moment from 'moment/moment';
 
 async function storageFile() {
     const date = moment().format('YYYY/MM/DD');
@@ -20,7 +18,7 @@ async function storageFile() {
     return files;
 }
 
-class Upload extends PureComponent {
+class Home extends PureComponent {
     static navigationOptions = {
         tabBarOnPress: async ({ defaultHandler, navigation }) => {
             const { navigate } = navigation;
@@ -33,38 +31,27 @@ class Upload extends PureComponent {
         super(props);
     }
 
-    componentDidMount() {
-        console.log(this.props);
-    }
-
-
-    async takePicture(data) {
-        const [date, unixTime] = [moment().format('YYYY/MM/DD'), moment().unix()];
-        const url = `${RNFS.DocumentDirectoryPath}/photo/${date}/${unixTime}.jpg`;
-        await RNFS.moveFile(data.path, url);
-        await RNFS.readDir(`${RNFS.DocumentDirectoryPath}/photo/${date}`).then((r) => {
-            console.log('result', r);
-        });
+    onFileUpload(file, fileName) {
+        console.log(file);
     }
 
     render() {
         const { files } = this.props.navigation.state.params;
-        const cameraProps = {
-            takePicture: this.takePicture
-        };
-
         return (
                 <View style={styles.container}>
-                    <Button
-                            onPress={() => this.onFileUpload()}
-                            title="拍照"
+                    <Image style={styles.photo}
+                           source={{ uri: `file://${files[0].path}` }}
                     />
-                    <RNCamera {...cameraProps}/>
                      <Button
-                             onPress={() => this.onFileUpload()}
-                             title="拍照2"
+                             onPress={this.onFileUpload}
+                             title="拍照"
+                             color="#841584"
                      />
-                </View >
+                    {/*<CameraButton style={styles.cameraBtn}*/}
+                    {/*photos={[]}*/}
+                    {/*onFileUpload={this.onFileUpload}*/}
+                    {/*/>*/}
+            </View >
         );
     }
 }
@@ -86,14 +73,6 @@ const styles = StyleSheet.create(
             }
         }
 );
-const mapStateToProps = state => {
-    return {
-        photoViews: state.PHOTO_VIEWS_REDUCER
-    };
-};
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ getPhotos: PHOTO_VIEWS_ACTION }, dispatch);
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Upload);
+export default Home;

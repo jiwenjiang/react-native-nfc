@@ -1,11 +1,13 @@
 import React, { PureComponent } from "react";
+import { Header } from 'react-navigation';
 import {
     StyleSheet,
     View,
     Text,
-    Button
+    Button,
+    TouchableOpacity,
+    Dimensions,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 class Home extends PureComponent {
 
@@ -18,14 +20,14 @@ class Home extends PureComponent {
     }
 
     componentDidMount() {
-        // navigator.geolocation.getCurrentPosition(
-        //         (initialPosition) => this.setState({ initialPosition }),
-        //         (error) => alert(error.message),
-        //         { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
-        // );
-        // this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
-        //     this.setState({ lastPosition });
-        // });
+        navigator.geolocation.getCurrentPosition(
+                (initialPosition) => this.setState({ initialPosition }),
+                (error) => alert(error.message),
+                { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
+        );
+        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
+            this.setState({ lastPosition });
+        });
     }
 
     componentWillUnmount() {
@@ -34,21 +36,26 @@ class Home extends PureComponent {
 
     render() {
         const { navigate } = this.props.navigation;
+        const maskProps = {
+            maskStyle: styles.centering
+        };
         return (
                 <View style={styles.container}>
                 <Text style={{ padding: 10 }}>Hello, J_bleach!</Text >
-                <Button
-                        onPress={() => navigate('QRcode')}
-                        title="扫描二维码"
-                />
-                <Text>
-                <Text style={styles.title}>Initial position: </Text>
-                        {JSON.stringify(this.state.initialPosition)}
-                </Text>
-                <Text>
-                <Text style={styles.title}>Current position: </Text>
-                {JSON.stringify(this.state.lastPosition)}
-                </Text>
+                    <TouchableOpacity >
+                               <Button
+                                       onPress={() => navigate('QRcode')}
+                                       title="扫描二维码"
+                               />
+                    </TouchableOpacity >
+                <Text >
+                <Text style={styles.title}>Initial position: </Text >
+                    {JSON.stringify(this.state.initialPosition)}
+                </Text >
+                <Text >
+                <Text style={styles.title}>Current position: </Text >
+                    {JSON.stringify(this.state.lastPosition)}
+                </Text >
             </View >
         );
     }
@@ -64,6 +71,19 @@ const styles = StyleSheet.create(
                 height: 22,
                 width: 22,
                 resizeMode: 'contain'
+            },
+            centering: {
+                alignItems: 'center',
+                justifyContent: 'center'
+            },
+            test: {
+                width: Dimensions.get('window').width,
+                height: Dimensions.get('window').height - Header.HEIGHT - 50,
+                position: 'absolute',
+                zIndex: 5,
+                backgroundColor: '#aaaaaa',
+                alignItems: 'center',
+                justifyContent: 'center'
             }
         }
 );

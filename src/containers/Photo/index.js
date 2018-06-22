@@ -2,56 +2,30 @@ import React, { PureComponent } from "react";
 import {
     StyleSheet,
     View,
-    Image,
     Button
 } from 'react-native';
-// import CameraButton from '../../components/CameraButton';
-import { mkdir, readPath } from '../../service/utils/fileOperations';
-import RNFS from 'react-native-fs';
-import moment from 'moment/moment';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { PHOTO_VIEWS_ACTION } from '../../redux/action';
 
-async function storageFile() {
-    const date = moment().format('YYYY/MM/DD');
-    const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
-    await mkdir(url);
-    const files = await readPath(url);
-    return files;
-}
-
-class Home extends PureComponent {
-    static navigationOptions = {
-        tabBarOnPress: async ({ defaultHandler, navigation }) => {
-            const { navigate } = navigation;
-            const files = await storageFile();
-            navigate('Photo', { files });
-        }
-    };
-
+class Upload extends PureComponent {
     constructor(props) {
         super(props);
     }
 
-    onFileUpload(file, fileName) {
-        console.log(file);
-    }
-
     render() {
-        const { files } = this.props.navigation.state.params;
+        const { navigate } = this.props.navigation;
         return (
                 <View style={styles.container}>
-                    <Image style={styles.photo}
-                           source={{ uri: `file://${files[0].path}` }}
+                    <Button
+                            onPress={() => navigate('Camera')}
+                            title="拍照"
                     />
                      <Button
-                             onPress={this.onFileUpload}
-                             title="拍照"
-                             color="#841584"
+                             onPress={() => navigate('QRcode')}
+                             title="扫描二维码"
                      />
-                    {/*<CameraButton style={styles.cameraBtn}*/}
-                    {/*photos={[]}*/}
-                    {/*onFileUpload={this.onFileUpload}*/}
-                    {/*/>*/}
-            </View >
+                </View >
         );
     }
 }
@@ -61,18 +35,17 @@ const styles = StyleSheet.create(
             container: {
                 flex: 1,
                 backgroundColor: '#fff'
-            },
-            icon: {
-                height: 22,
-                width: 22,
-                resizeMode: 'contain'
-            },
-            photo: {
-                width: 50,
-                height: 50
             }
         }
 );
+const mapStateToProps = state => {
+    return {
+        photoViews: state.PHOTO_VIEWS_REDUCER
+    };
+};
 
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ getPhotos: PHOTO_VIEWS_ACTION }, dispatch);
+};
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Upload);
