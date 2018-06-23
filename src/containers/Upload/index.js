@@ -3,9 +3,9 @@ import {
     StyleSheet,
     View,
     Image,
-    Button
+    Button,
+    SectionList,
 } from 'react-native';
-// import CameraButton from '../../components/CameraButton';
 import { mkdir, readPath } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
 import moment from 'moment/moment';
@@ -42,15 +42,6 @@ class Home extends PureComponent {
                     <Image style={styles.photo}
                            source={{ uri: `file://${files[0].path}` }}
                     />
-                     <Button
-                             onPress={this.onFileUpload}
-                             title="拍照"
-                             color="#841584"
-                     />
-                    {/*<CameraButton style={styles.cameraBtn}*/}
-                    {/*photos={[]}*/}
-                    {/*onFileUpload={this.onFileUpload}*/}
-                    {/*/>*/}
             </View >
         );
     }
