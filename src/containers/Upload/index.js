@@ -25,19 +25,12 @@ class Home extends PureComponent {
             tabBarOnPress: async ({ defaultHandler, navigation }) => {
                 const { navigate } = navigation;
                 const { date, files } = await storageFile();
-
                 navigate('Upload', { date, files });
             }
         };
 
     constructor(props) {
         super(props);
-//        this.sections = [
-//              { key: "A", data: [{ title: "阿童木2" }, { title: "阿玛尼" }, { title: "爱多多" }] },
-//              { key: "B", data: [{ title: "表哥" }, { title: "贝贝" }, { title: "表弟" }, { title: "表姐" }, { title: "表叔" }] },
-//              { key: "C", data: [{ title: "成吉思汗" }, { title: "超市快递" }] },
-//              { key: "W", data: [{ title: "王磊" }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }] },
-//            ];
         this.state = {
             sections: []
         }
@@ -65,12 +58,12 @@ class Home extends PureComponent {
     }
 
     renderSectionHeader = (e) => {
-            return <Text style={styles.head}>{e.section.key}</Text>
+        return <Text style={styles.head}>{e.section.key}</Text>
     }
 
-         onRefresh = (e) => {
-            console.log(e)
-         }
+    onRefresh = (e) => {
+        console.log(e)
+    }
 
     render() {
         return (
@@ -106,14 +99,12 @@ const styles = StyleSheet.create(
                 fontSize: 24
             },
             photo: {
-                width: Dimensions.get('window').width  / 4 - 2,
-                height: Dimensions.get('window').width  / 4 - 2 ,
-                margin:1
+                width: Dimensions.get('window').width  / 4,
+                height: Dimensions.get('window').width  / 4,
+                borderWidth: 0.5,
+                borderColor: '#FFFFFF'
             }
         }
 );
 
-//                    <Image style={styles.photo}
-//                           source={{ uri: `file://${files[0].path}` }}
-//                    />
 export default Home;
