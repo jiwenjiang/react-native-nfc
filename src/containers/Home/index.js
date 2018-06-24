@@ -20,14 +20,14 @@ class Home extends PureComponent {
     }
 
     componentDidMount() {
-        navigator.geolocation.getCurrentPosition(
-                (initialPosition) => this.setState({ initialPosition }),
-                (error) => alert(error.message),
-                { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
-        );
-        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
-            this.setState({ lastPosition });
-        });
+//        navigator.geolocation.getCurrentPosition(
+//                (initialPosition) => this.setState({ initialPosition }),
+//                (error) => alert(error.message),
+//                { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
+//        );
+//        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
+//            this.setState({ lastPosition });
+//        });
     }
 
     componentWillUnmount() {
@@ -42,12 +42,6 @@ class Home extends PureComponent {
         return (
                 <View style={styles.container}>
                 <Text style={{ padding: 10 }}>Hello, J_bleach!</Text >
-                    <TouchableOpacity >
-                               <Button
-                                       onPress={() => navigate('QRcode')}
-                                       title="扫描二维码"
-                               />
-                    </TouchableOpacity >
                 <Text >
                 <Text style={styles.title}>Initial position: </Text >
                     {JSON.stringify(this.state.initialPosition)}
