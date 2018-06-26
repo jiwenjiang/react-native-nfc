@@ -20,14 +20,14 @@ class Home extends PureComponent {
     }
 
     componentDidMount() {
-        navigator.geolocation.getCurrentPosition(
-                (initialPosition) => this.setState({ initialPosition }),
-                (error) => alert(error.message),
-                { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
-        );
-        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
-            this.setState({ lastPosition });
-        });
+//        navigator.geolocation.getCurrentPosition(
+//                (initialPosition) => this.setState({ initialPosition }),
+//                (error) => alert(error.message),
+//                { enableHighAccuracy: true, timeout: 2000, maximumAge: 1000 }
+//        );
+//        this.watchID = navigator.geolocation.watchPosition((lastPosition) => {
+//            this.setState({ lastPosition });
+//        });
     }
 
     componentWillUnmount() {
