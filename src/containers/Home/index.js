@@ -6,7 +6,7 @@ import {
     Text,
     Button,
     TouchableOpacity,
-    Dimensions,
+    Dimensions
 } from 'react-native';
 
 class Home extends PureComponent {
@@ -35,19 +35,9 @@ class Home extends PureComponent {
     }
 
     render() {
-        const { navigate } = this.props.navigation;
-        const maskProps = {
-            maskStyle: styles.centering
-        };
         return (
                 <View style={styles.container}>
                 <Text style={{ padding: 10 }}>Hello, J_bleach!</Text >
-                    <TouchableOpacity >
-                               <Button
-                                       onPress={() => navigate('QRcode')}
-                                       title="扫描二维码"
-                               />
-                    </TouchableOpacity >
                 <Text >
                 <Text style={styles.title}>Initial position: </Text >
                     {JSON.stringify(this.state.initialPosition)}
@@ -66,24 +56,6 @@ const styles = StyleSheet.create(
             container: {
                 flex: 1,
                 backgroundColor: '#fff'
-            },
-            icon: {
-                height: 22,
-                width: 22,
-                resizeMode: 'contain'
-            },
-            centering: {
-                alignItems: 'center',
-                justifyContent: 'center'
-            },
-            test: {
-                width: Dimensions.get('window').width,
-                height: Dimensions.get('window').height - Header.HEIGHT - 50,
-                position: 'absolute',
-                zIndex: 5,
-                backgroundColor: '#aaaaaa',
-                alignItems: 'center',
-                justifyContent: 'center'
             }
         }
 );

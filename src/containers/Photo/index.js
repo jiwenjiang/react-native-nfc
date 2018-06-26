@@ -22,6 +22,7 @@ class Upload extends PureComponent {
                             title="拍照"
                     />
                      <Button
+                             color="#841584"
                              onPress={() => navigate('QRcode')}
                              title="扫描二维码"
                      />

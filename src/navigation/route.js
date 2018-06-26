@@ -14,7 +14,8 @@ const AppNavigator = createStackNavigator(
             QRcode: {
                 screen: QRcode,
                 navigationOptions: {
-                    header: null
+                    // header: null
+                    title: '扫一扫'
                 }
             },
             Camera: {
