@@ -12,7 +12,7 @@ import { mkdir, readPath } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
 import moment from 'moment/moment';
 
-async function storageFile(day) {
+async function getFiles(day) {
     const date = day || moment().format('YYYY/MM/DD');
     const url = `${RNFS.DocumentDirectoryPath}/photo/${date}`;
     await mkdir(url);
@@ -24,7 +24,7 @@ class Home extends PureComponent {
     static navigationOptions = {
         tabBarOnPress: async ({ defaultHandler, navigation }) => {
             const { navigate } = navigation;
-            const { date, files } = await storageFile();
+            const { date, files } = await getFiles();
             navigate('Upload', { date, files });
         }
     };
@@ -46,6 +46,17 @@ class Home extends PureComponent {
 
     _onFocus() {
         const { date, files } = this.props.navigation.state.params;
+        this.renderList(date, files);
+    }
+
+    onRefresh = async () => {
+        const formatDate = this.state.date.replace(/\//g, "-");
+        const date = moment(formatDate).subtract(1, 'days').format('YYYY/MM/DD');
+        const { files } = await getFiles(date);
+        this.renderList(date, files);
+    };
+
+    renderList(date, files) {
         const fileList = files && files.map(v => {
             return {
                 title: v.name,
@@ -53,9 +64,10 @@ class Home extends PureComponent {
                 url: v.path
             };
         });
-        const sections = [{ key: date, data: [{ files: fileList }] }];
+        const sections = [...this.state.sections, { key: date, data: [{ files: fileList }] }];
         this.setState({
-                          sections
+                          sections,
+                          date
                       });
     }
 
@@ -71,9 +83,6 @@ class Home extends PureComponent {
         return <Text style={styles.head}>{e.section.key}</Text >;
     };
 
-    onRefresh = (e) => {
-        console.log(e);
-    };
 
     render() {
         return (
@@ -84,6 +93,7 @@ class Home extends PureComponent {
                               sections={this.state.sections}
                               onRefresh={this.onRefresh}
                               refreshing={false}
+                              keyExtractor={(item, index) => index}
                       />
                 </View >
         );
