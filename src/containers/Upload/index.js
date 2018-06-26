@@ -6,7 +6,9 @@ import {
     Button,
     SectionList,
     Text,
-    Dimensions
+    Dimensions,
+    TouchableOpacity,
+    DatePickerAndroid
 } from 'react-native';
 import { mkdir, readPath } from '../../service/utils/fileOperations';
 import RNFS from 'react-native-fs';
@@ -32,7 +34,9 @@ class Home extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            sections: []
+            sections: [],
+            startTime: moment().format('YYYY-MM-DD'),
+            endTime: moment().format('YYYY-MM-DD')
         };
     }
 
@@ -46,7 +50,13 @@ class Home extends PureComponent {
 
     _onFocus() {
         const { date, files } = this.props.navigation.state.params;
-        this.renderList(date, files);
+        this.setState(
+                {
+                    sections: []
+                }, () => {
+                    this.renderList(date, files);
+                }
+        );
     }
 
     onRefresh = async () => {
@@ -83,11 +93,56 @@ class Home extends PureComponent {
         return <Text style={styles.head}>{e.section.key}</Text >;
     };
 
+    async showPicker(type) {
+        try {
+            const { action, year, month, day } = await DatePickerAndroid.open(
+                    {
+                        date: new Date()
+                    }
+            );
+            if (action !== DatePickerAndroid.dismissedAction) {
+                this.setState(
+                        {
+                            [type]: `${year}-${month + 1}-${day}`
+                        }
+                );
+                console.log(year);
+                console.log(month);
+                console.log(day);
+                // 这里开始可以处理用户选好的年月日三个参数：year, month (0-11), day
+            }
+        } catch ({ code, message }) {
+            console.warn('Cannot open date picker', message);
+        }
+    };
+
+    ListHeaderComponent = () => {
+        const { startTime, endTime } = this.state;
+        return <View style={styles.buttonBox}>
+                <TouchableOpacity
+                        style={styles.button}
+                        underlayColor="#a5a5a5"
+                        onPress={() => this.showPicker('startTime')}
+                >
+                    <Text style={styles.buttonText}>{startTime}</Text >
+                </TouchableOpacity >
+                <TouchableOpacity
+                        style={styles.button}
+                        underlayColor="#a5a5a5"
+                        onPress={() => this.showPicker('endTime')}
+                >
+                    <Text style={styles.buttonText}>{endTime}</Text >
+                </TouchableOpacity >
+            </View >;
+
+    };
+
 
     render() {
         return (
                 <View style={styles.container}>
                       <SectionList
+                              ListHeaderComponent={this.ListHeaderComponent}
                               renderSectionHeader={this.renderSectionHeader}
                               renderItem={this.renderItem}
                               sections={this.state.sections}
@@ -123,6 +178,21 @@ const styles = StyleSheet.create(
                 height: Dimensions.get('window').width / 4,
                 borderWidth: 0.5,
                 borderColor: '#FFFFFF'
+            },
+            buttonBox: {
+                flex: 1,
+                flexDirection: 'row'
+            },
+            button: {
+                flex: 1,
+                backgroundColor: 'white',
+                padding: 15,
+                borderBottomWidth: StyleSheet.hairlineWidth,
+                borderBottomColor: '#cdcdcd'
+            },
+            buttonText: {
+                justifyContent: 'center',
+                textAlign: 'center'
             }
         }
 );
