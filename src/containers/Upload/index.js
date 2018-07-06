@@ -27,6 +27,7 @@ class Upload extends PureComponent {
   static navigationOptions = {
     tabBarOnPress: async ({ defaultHandler, navigation }) => {
       const { navigate } = navigation;
+      console.log(navigation);
       const { date, files } = await getFiles();
       navigate('Upload', { date, files });
     }
