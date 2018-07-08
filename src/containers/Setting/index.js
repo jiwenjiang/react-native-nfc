@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     AppRegistry,
     StyleSheet,
@@ -36,12 +36,10 @@ class ScanScreen extends Component {
 
     render() {
         return (
-                <ScanView
-                        style={{ flex: 1 }}
-                        torchMode={this.state.torchMode}
-                        cameraType={this.state.cameraType}
-                />
-        );
+
+            <View></View>
+        )
+            ;
     }
 }
 

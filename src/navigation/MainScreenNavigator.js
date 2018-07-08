@@ -15,31 +15,31 @@ const MainScreenNavigator = createMaterialBottomTabNavigator(
                     tabBarIcon: tabBarIcon('home')
                 }
             },
-            Photo: {
-                screen: Photo,
-                navigationOptions: {
-                    title: '拍照',
-                    tabBarIcon: tabBarIcon('photo-album')
-                }
-            },
-            NFC: {
-                screen: NFC,
-                navigationOptions: {
-                    title: 'NFC',
-                    tabBarIcon: tabBarIcon('credit-card')
-                }
-            },
-            Upload: {
-                screen: Upload,
-                navigationOptions: {
-                    title: '上传',
-                    tabBarIcon: tabBarIcon('cloud-upload')
-                }
-            },
+            // Photo: {
+            //     screen: Photo,
+            //     navigationOptions: {
+            //         title: '拍照',
+            //         tabBarIcon: tabBarIcon('photo-album')
+            //     }
+            // },
+            // NFC: {
+            //     screen: NFC,
+            //     navigationOptions: {
+            //         title: 'NFC',
+            //         tabBarIcon: tabBarIcon('credit-card')
+            //     }
+            // },
+            // Upload: {
+            //     screen: Upload,
+            //     navigationOptions: {
+            //         title: '上传',
+            //         tabBarIcon: tabBarIcon('cloud-upload')
+            //     }
+            // },
             Setting: {
                 screen: Setting,
                 navigationOptions: {
-                    title: '设置',
+                    title: '账户',
                     tabBarIcon: tabBarIcon('settings')
                 }
             }

@@ -1,3 +1,6 @@
+/**
+ * Created by j_bleach on 2018/7/8.
+ */
 import React, {PureComponent} from "react";
 import {Header} from 'react-navigation';
 import {
@@ -7,46 +10,35 @@ import {
     TouchableOpacity,
     FlatList,
     Dimensions,
-    Alert
+    Alert,
+    ActivityIndicator
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Mask from '../../components/Mask';
 
 class Home extends PureComponent {
+
+    static navigationOptions = {
+        headerTitle: <View style={{flex: 1, justifyContent: 'center', flexDirection: 'row'}}>
+            <Text style={{textAlign: 'center', flex: 7, fontSize: 18}}>电话送达，现场人证核实</Text>
+            <Icon name="print" size={24} style={{alignSelf: 'flex-end', flex: 1}}/>
+        </View>
+    };
 
     constructor(props) {
         super(props);
         this.data = [
             {
-                title: '现场领取',
+                title: '身份证照',
                 icon: 'payment'
             },
             {
-                title: '公告确认',
+                title: '人脸照',
                 icon: 'room'
             },
             {
-                title: '送达求助',
+                title: '签字照',
                 icon: 'pets'
-            },
-            {
-                title: '邮寄核实',
-                icon: 'toc'
-            },
-            {
-                title: '邮寄回执单',
-                icon: 'tab'
-            },
-            {
-                title: '直接送达',
-                icon: 'stars'
-            },
-            {
-                title: '补充材料',
-                icon: 'shop'
-            },
-            {
-                title: '卷宗交接',
-                icon: 'restore'
             },
         ]
     }
@@ -55,15 +47,11 @@ class Home extends PureComponent {
 
     }
 
-    navigate(i) {
-        if (i.icon === 'payment') {
-            const { navigate } = this.props.navigation;
-            navigate('TodoList')
-        } else {
-            Alert.alert('Warning','暂未开通',[
-                {text: 'OK', onPress: () => console.log('OK Pressed')},
-            ])
-        }
+    navigate() {
+        Alert.alert('无法送达', '确定？', [
+            {text: '取消', onPress: () => console.log('OK Pressed')},
+            {text: '确定', onPress: () => console.log('OK Pressed')},
+        ])
     }
 
 
@@ -90,6 +78,20 @@ class Home extends PureComponent {
                         )}
                     />
                 </View>
+                <View style={{flexDirection: 'row'}}>
+                    <View style={styles.box}>
+                        <TouchableOpacity style={[styles.btn, {marginLeft: 5}]}
+                                          onPress={() => this.navigate()}>
+                            <Text style={{color: '#4177F6'}}>无法送达</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.box}>
+                        <TouchableOpacity style={[styles.btn, {marginRight: 5, backgroundColor: '#4177F6'}]}
+                                          >
+                            <Text style={{color: '#fff'}}>送达成功</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View >
         );
     }
@@ -98,11 +100,11 @@ class Home extends PureComponent {
 const styles = StyleSheet.create(
     {
         container: {
-            flex: 1,
+            height: '100%',
             backgroundColor: '#fff'
         },
         Title: {
-            flex: 1,
+            height: '20%',
             backgroundColor: '#4177F6',
             alignItems: 'center',
             justifyContent: 'center',
@@ -110,9 +112,6 @@ const styles = StyleSheet.create(
         Text: {
             fontSize: 28,
             color: '#fff',
-        },
-        menus: {
-            flex: 4
         },
         items: {
             width: Dimensions.get('window').width / 3,
@@ -122,6 +121,27 @@ const styles = StyleSheet.create(
             borderColor: '#eeeeee',
             alignItems: 'center',
             justifyContent: 'center'
+        },
+        row: {
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center'
+        },
+        box: {
+            flex: 1,
+            marginTop: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        btn: {
+            borderColor: '#eee',
+            borderWidth: 1,
+            borderRadius: 5,
+            width: '90%',
+            height: 45,
+            justifyContent: 'center',
+            alignItems: 'center',
         }
     }
 );

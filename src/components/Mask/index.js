@@ -32,8 +32,8 @@ const styles = StyleSheet.create(
                 left: 0,
                 width: Dimensions.get('window').width,
                 height: Dimensions.get('window').height,
-                backgroundColor: '#000000',
-                opacity: .45
+                backgroundColor: '#aaaaaa',
+                opacity: .15
             }
         }
 );
